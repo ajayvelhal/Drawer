@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text("Drawer"),
+        title: Center(child: Text("Drawer")),
         elevation: defaultTargetPlatform == TargetPlatform.android ? 5.0 : 0.0,
       ),
       drawer: new Drawer(
@@ -45,29 +45,26 @@ class HomePage extends StatelessWidget {
             ),
           ),
           new ListTile(
-            title: Text("Page One"),
-            trailing: new Icon(Icons.arrow_forward),
-            onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).pushNamed("/a");
-            }
-            ),
+              title: Text("Page One"),
+              trailing: new Icon(Icons.arrow_forward),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed("/a");
+              }),
           new ListTile(
-            title: Text("Page Two"),
-            trailing: new Icon(Icons.arrow_forward),
+              title: Text("Page Two"),
+              trailing: new Icon(Icons.arrow_forward),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed("/b");
-              }
-          ),
+              }),
           new ListTile(
-            title: Text("Page Three"),
-            trailing: new Icon(Icons.arrow_forward),
+              title: Text("Page Three"),
+              trailing: new Icon(Icons.arrow_forward),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed("/c");
-              }
-          ),
+              }),
           new Divider(),
           new ListTile(
             title: Text("Close"),
